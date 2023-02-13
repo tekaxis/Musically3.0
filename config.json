@@ -1,0 +1,56 @@
+{
+"prefix":".",
+"color":"#e4a32f",
+"owner":["221007455763562499"],
+"clientID":"1072881896226308156",
+"clientSecret":"ntr-P7Wfy-fdZEXMp7AhLOAxDI391Ipc",
+"channelName":"hydra-song-requests",
+
+"emojis":{
+
+    "play":"<:play:1035633868994256919>",
+    "pause":"<:Pause:1035633188552310905>",
+    "stop":"<:WhiteButton:1035632089053278259>",
+    "loop":"<:loop_off:1035632340958982195>",
+    "loop_on":"<:loop_on:1036642742798917732>",
+    "shuffle":"<:shuffle:1035637522912514080>",
+    "skip":"<:skip:1035631545173676033>"
+},
+
+"nodes":[{
+    "name":"NODE_1",
+    "host":"134.122.2.103",
+    "port":2333,
+    "password":"youshallnotpass",
+    "regions": ["us-east", "us-central", "us-south", "us-west", "brazil"],
+    "secure":false
+},
+{
+    "name":"Asia",
+    "host":"lava1.horizxon.studio",
+    "port":80,
+    "password":"horizxon.studio",
+    "regions": ["hongkong", "russia", "rotterdam", "singapore","southafrica","sydney"],
+    "secure":false
+},
+{
+    "name":"US",
+    "host":"lava2.horizxon.studio",
+    "port":80,
+    "password":"horizxon.studio",
+    "regions": ["hongkong" ,"russia", "rotterdam", "singapore","southafrica","sydney"],
+    "secure":false
+},
+{
+    "name":"EUROPE",
+    "host":"lava3.horizxon.studio",
+    "port":80,
+    "password":"horizxon.studio",
+    "regions": ["rotterdam", "singapore","southafrica","sydney"],
+    "secure":false
+}
+
+]
+
+
+}
