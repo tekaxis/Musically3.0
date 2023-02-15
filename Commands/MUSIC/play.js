@@ -6,8 +6,8 @@ module.exports = class extends Command {
         super(...args, {
             name: "play",
             aliases: ['p'],
-            description: 'This provides the ping of the bot',
-            category: 'Utilities'
+            description: 'Mostra o ping do bot',
+            category: 'Utilitario'
         });
     }
 
@@ -23,7 +23,7 @@ module.exports = class extends Command {
 
             if (!args[0] && !getAttachmentURL(message)) {
 
-                return message.error(`Please provide an URL or search query`)
+                return message.error(`Forneça um nome ou a URL da música desejada`)
             }
 
             let player = client.poru.players.get(message.guild.id)
@@ -55,7 +55,7 @@ module.exports = class extends Command {
 
                     let e = new discord.EmbedBuilder()
                         .setColor(client.config.color)
-                        .setTitle(`Track queued - Position ${client.queue.get(message.guild.id).queue.length}`)
+                        .setTitle(`Música adicionada - Posição ${client.queue.get(message.guild.id).queue.length}`)
                         .setDescription(`[${track.info.title}](${track.info.uri}) - ${track.info.requester}`)
 
                     return message.channel.send({ embeds: [e] })
@@ -66,7 +66,7 @@ module.exports = class extends Command {
 
 
             if (client.regex(args.join())) {
-              return  message.send(`As of recent events we've removed YouTube as a supported platform from ${client.user.username}.`)
+              return  message.send(`Não utilize sites pornograficos, caso se repita você será banido ${client.user.username}.`)
          }
 
             const resolve = await client.poru.resolve(args.join(' '), "spotify");
@@ -74,7 +74,7 @@ module.exports = class extends Command {
       
             if (loadType === "PLAYLIST_LOADED") {
 
-               message.send(`${tracks.length} tracks queued from : \`${playlistInfo.name} \``);
+               message.send(`${tracks.length} músicas carregadas de : \`${playlistInfo.name} \``);
                 for (let x of resolve.tracks) {
                     x.info.requester = message.author;
                     player.queue.add(x);
@@ -90,7 +90,7 @@ module.exports = class extends Command {
 
                 let e = new discord.EmbedBuilder()
                     .setColor("Blue")
-                    .setTitle(`Track queued - Position ${player.queue.length}`)
+                    .setTitle(`Música carregada - Posição ${player.queue.length}`)
                     .setDescription(`${track.info.author} - ${track.info.title}`)
 
                 if(player.isPlaying){
@@ -101,12 +101,12 @@ module.exports = class extends Command {
 
             } else if (loadType === "NO_MATCHES") {
 
-                return message.send(`No songs found. Try to be as specific as possible by only including song title and artist name!`)
+                return message.send(`Nenhuma música encontrada. Tente ser mais especifico, incluindo nome do artista ou album`)
 
 
             } else {
 
-                return message.send(`No songs found. Try to be as specific as possible by only including song title and artist name!`)
+                return message.send(`Nenhuma música encontrada. Tente ser mais especifico, incluindo nome do artista ou album`)
             }
 
 

@@ -9,7 +9,7 @@ module.exports = class extends Command {
             name: "unban",
             aliases :['ub'],
             description: `
-Lets you unban users from controlling the bot.
+Desbloqueia usuários para voltarem a usar o bot.
 [Admin]`,
         });
     }
@@ -25,7 +25,7 @@ Lets you unban users from controlling the bot.
        if(!guild.banned.includes(member.user.id)){
 
 
-            message.warn(`User \`${member.user.tag}\` is not banned from requesting songs.`);
+            message.warn(`Membro \`${member.user.tag}\` não está bloqueado de usar o bot.`);
         }
 
 
@@ -33,7 +33,7 @@ Lets you unban users from controlling the bot.
         await guild.save();
 
 
-        return message.success(`User \`${member.user.tag}\` has been unbanned and can request songs again.`)
+        return message.success(`Membro \`${member.user.tag}\` foi desbloqueado e pode usar o bot novamente.`)
 
 
 

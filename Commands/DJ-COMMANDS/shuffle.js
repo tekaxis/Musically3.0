@@ -5,8 +5,8 @@ module.exports = class extends Command {
     constructor(...args) {
         super(...args, {
             name: "shuffle",
-            aliases: ['sh'],
-            description: 'Shuffle the queue.',
+            aliases: ['mix'],
+            description: 'Mistura as músicas na fila.',
         });
     }
 
@@ -15,7 +15,7 @@ module.exports = class extends Command {
 
   if(player.queue.length < 3){
 
-    return message.send(`Need at least \`3\` songs in the queue to shuffle.`)
+    return message.send(`Necessário ao menos \`3\` músicas na fila para embaralhar.`)
   }
 
 

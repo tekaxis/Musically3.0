@@ -8,7 +8,7 @@ module.exports = class extends Command {
             name: "requester",
             description: `
             .requester
-            Enables/disables if the requester is shown on each track.
+            Em teste!
             [Admin] ​
           `,
         });

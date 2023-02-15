@@ -6,8 +6,7 @@ module.exports = class extends Command {
         super(...args, {
             name: "24/7",
             aliases: ['247'],
-            description: `Toggle the bot to stay 24/7 in the voice channel.
-            [Premium, Admin]`,
+            description: ``,
         });
     }
 

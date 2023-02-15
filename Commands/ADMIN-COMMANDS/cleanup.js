@@ -8,7 +8,7 @@ module.exports = class extends Command {
             name: "cleanup",
             aliases :['clean'],
             description: `
-Clear command and bot messages.
+Limpa as mensagens do bot.
 [Admin]`,
         });
     }
@@ -25,7 +25,7 @@ Clear command and bot messages.
 
 
 
-        let msg = await message.success(`Cleaning up \`${length}\` messages.`)
+        let msg = await message.success(`Limpando \`${length}\` mensagens.`)
 
 
         setTimeout(function () {

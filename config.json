@@ -4,7 +4,7 @@
 "owner":["221007455763562499"],
 "clientID":"1072881896226308156",
 "clientSecret":"ntr-P7Wfy-fdZEXMp7AhLOAxDI391Ipc",
-"channelName":"hydra-song-requests",
+"channelName":"digite-suas-musicas",
 
 "emojis":{
 
@@ -25,28 +25,13 @@
     "regions": ["us-east", "us-central", "us-south", "us-west", "brazil"],
     "secure":false
 },
+
 {
-    "name":"Asia",
-    "host":"lava1.horizxon.studio",
-    "port":80,
-    "password":"horizxon.studio",
-    "regions": ["hongkong", "russia", "rotterdam", "singapore","southafrica","sydney"],
-    "secure":false
-},
-{
-    "name":"US",
+    "name":"BR",
     "host":"lava2.horizxon.studio",
     "port":80,
     "password":"horizxon.studio",
     "regions": ["hongkong" ,"russia", "rotterdam", "singapore","southafrica","sydney"],
-    "secure":false
-},
-{
-    "name":"EUROPE",
-    "host":"lava3.horizxon.studio",
-    "port":80,
-    "password":"horizxon.studio",
-    "regions": ["rotterdam", "singapore","southafrica","sydney"],
     "secure":false
 }
 

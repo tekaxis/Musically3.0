@@ -8,12 +8,11 @@ module.exports = class extends Command {
             aliases: ['s','next'],
             description: `
 .skip
-Lets you skip the current song.
-[DJ]
+Pula para a próxima música.
             ​
-.skip <trackNumber>
-Skips to a specific track in the queue.
-[DJ]`,
+.skip <númerodaMúsica>
+Pula para uma música específica na fila.
+`,
         });
     }
 

@@ -4,5 +4,5 @@ module.exports = class extends PoruEvent {
 
     async run(client,node) {
 
-    client.logger.log(`${node.name} is Connected!`)    
+    client.logger.log(`${node.name} esta conectado!`)    
 }}

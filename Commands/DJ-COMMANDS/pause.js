@@ -5,10 +5,9 @@ module.exports = class extends Command {
     constructor(...args) {
         super(...args, {
             name: "pause",
-            aliases: ['break'],
+            aliases: [''],
             description: `
-Pauses the current playing song.
-[DJ]`,
+Pausa a música atual`,
         });
     }
 
@@ -16,12 +15,12 @@ Pauses the current playing song.
 
 
         if (player.isPaused) {
-            return message.send(`The song is already paused.`)
+            return message.send(`A música já esta pausada.`)
         }
 
         player.pause(true);
 
-        return message.success(`Paused the song.`)
+        return message.success(`Música pausada.`)
 
 
     }

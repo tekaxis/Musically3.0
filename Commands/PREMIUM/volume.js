@@ -9,11 +9,10 @@ module.exports = class extends Command {
             aliases: ['vol', "v"],
             description: `
           **  .volume 1-200**
-            Lets you change the bots output volume.
-          \`[Premium, DJ]\`    
+            Modifica o volume do bot.   
             **.volume default 1-200**
-            Lets you change the bots default output volume.
-          \`[Premium, DJ]\``,
+            Modifica o volume padrão do bot.
+            `,
         });
     }
 
@@ -22,12 +21,12 @@ module.exports = class extends Command {
 
         if (!args[0]) {
 
-            return message.success(`Volume is at \`${player.filters.volume * 100}%\``)
+            return message.success(`Volume está em \`${player.filters.volume * 100}%\``)
         } else if (isNaN(args[0])) {
 
             return message.error(`
             Invalid argument provided.
-            Have a look at \`.help volume\``)
+            Digite \`.help volume\``)
         }
 
 
@@ -36,21 +35,21 @@ module.exports = class extends Command {
 
 
             player.setVolume(2);
-            return message.success(`Volume is set to \`${player.filters.volume * 100}%\``)
+            return message.success(`Volume está em \`${player.filters.volume * 100}%\``)
 
 
         } else if (args[0] < 0) {
 
 
             player.setVolume(0.01);
-            return message.success(`Volume is set to \`${player.filters.volume * 100}%\``)
+            return message.success(`Volume está em \`${player.filters.volume * 100}%\``)
 
 
         }
 
 
         player.setVolume(args[0] / 100);
-        return message.success(`Volume is set to \`${player.filters.volume * 100}%\``)
+        return message.success(`Volume está em \`${player.filters.volume * 100}%\``)
 
 
 

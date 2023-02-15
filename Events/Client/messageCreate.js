@@ -174,9 +174,8 @@ Server Id : ${message.guild.id} `)
 
     if (user.blacklist) {
       return message.error(`You have been blacklisted from bot 
-**CONTACT US**
-[Support Server](${client.config.support})
-Mail us - support@parasdocs.tech
+(${client.config.support})
+Carlu#6635
         
         `, message.channel)
     }

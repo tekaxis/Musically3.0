@@ -152,14 +152,14 @@ async update(){
     .setColor("Purple")
     .setImage(player.currentTrack.info.image)
     .setFooter({text:
-      `${player.queue.length} songs in queue | Volume: ${
+      `${player.queue.length} músicas na fila | Volume: ${
         player.filters.volume * 100
-      }%${player.isPaused ? " | Song paused" : ""}${
+      }%${player.isPaused ? " | Música pausada" : ""}${
         loop ? ` | Loop: ${loop}` : ""
       }`
      } );
-  const content = `** **\n**__Queue list:__**\n\n${
-    player.queue.length > 15 ? `And **${player.queue.length - 15}** more...\n` : ""
+  const content = `** **\n**__Fila:__**\n\n${
+    player.queue.length > 15 ? `E **${player.queue.length - 15}** mais...\n` : ""
   }${
     player.queue.length > 0
       ? `${player.queue
@@ -169,7 +169,7 @@ async update(){
           )
           .reverse()
           .join("\n")}`
-      : "Join a voice channel and queue songs by name or url in here."
+      : "Entre em um canal de voz e adicione músicas digitando pelo nome ou sua URL aqui."
   }`;
 
   message.edit({embeds:[embed],content:content});

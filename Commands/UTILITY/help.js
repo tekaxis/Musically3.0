@@ -9,8 +9,7 @@ module.exports = class extends Command {
             name: "help",
             aliases:['h'],
             description : `
-            Shows the help menu.
-            \`[Everyone]\`            
+            Mostra o menu de ajuda.           
             `
         });
     }
@@ -31,9 +30,9 @@ if(args[0]){
 
         let embed = new discord.EmbedBuilder()
         .setColor("Blue")
-        .setAuthor({name:`Help Command: ${command.name}`,iconURL:client.user.displayAvatarURL()})  
+        .setAuthor({name:`Ajuda: ${command.name}`,iconURL:client.user.displayAvatarURL()})  
         .setDescription(`
-Aliases: \`${command.aliases}\`
+Comandos alternativos: \`${command.aliases}\`
 ${command.description}
 
 `)
@@ -71,7 +70,7 @@ ${command.description}
                 .setAuthor({name:"Help Command",iconURL:client.user.displayAvatarURL()})  
                 .setDescription(`
                 **Everyone commands**
-                \`help\`, \`lyrics\`, \`ping\`, \`play\`, \`playlist\`, \`premiumstatus\`, \`queue\`, \`search\`, \`songinfo\`, \`voteskip\`
+                \`help\`, \`ping\`, \`play\`, \`queue\`, \`songinfo\`
                 
                 **DJ commands**
                 \`clear\`, \`leave\`, \`loop\`, \`move\`, \`pause\`, \`remove\`, \`replay\`, \`resume\`, \`seek\`, \`shuffle\`, \`skip\`, \`stop\`
@@ -86,8 +85,6 @@ ${command.description}
                 View commands | Configure settings
                                 
                 `)
-
-.setFooter({text:`Type '${guild.prefix}help <CommandName>' for details on a command`})
 
 
                 return message.channel.send({embeds:[embed]});

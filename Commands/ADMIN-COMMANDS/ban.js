@@ -10,7 +10,7 @@ module.exports = class extends Command {
             aliases :['b'],
             description: `
             .ban <user>
-Lets you ban users from controlling the bot.
+Bloqueia alguém de usar o bot.
 [Admin]`,
         });
     }
@@ -26,8 +26,8 @@ Lets you ban users from controlling the bot.
         if(member.permissions.has(PermissionsBitField.resolve("Administrator")) || member.permissions.has(PermissionsBitField.resolve("MangeGuild"))){
 
 
-            return message.error(`You can't exclude users with the following permissions:
-           \` Manage Server, Administrator\`.`)
+            return message.error(`Não pode bloquear usuários pois não tem alguma das seguintes permissões:
+           \` Gerenciar servidor, Administrador\`.`)
 
 
 

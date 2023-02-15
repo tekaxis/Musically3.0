@@ -8,16 +8,14 @@ module.exports = class extends Command {
             aliases:['latency'],
             description : `
 **.ping**
-Shows the latency of the bot.
+
 \`[Everyone]\`
 ​
 **.ping ws**
-Shows the websocket latency of the bot.
-\`[Everyone]\`
+
 ​
 **.ping rest**
-Shows the rest latency of the bot.
-\`[Everyone]\`
+
             
             `
         });

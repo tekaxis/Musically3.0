@@ -17,7 +17,7 @@ client.start(process.env.TOKEN);
 mongoose.connect(process.env.DB, dbOptions);
 mongoose.Promise = global.Promise;
 mongoose.connection.on('connected', () => {
-  console.log('[DB] DATABASE CONNECTED');
+  console.log('[DB] BANCO DE DADOS CONECTADO');
 });
 mongoose.connection.on('err', (err) => {
   console.log(`Mongoose connection error: \n ${err.stack}`);

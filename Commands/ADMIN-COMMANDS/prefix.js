@@ -8,11 +8,11 @@ module.exports = class extends Command {
             name: "prefix",
             description: `
            .prefix
-           Show the current prefix.
+           Mostra o prefixo atual.
            [Admin]
            
-           .prefix <new prefix>
-           Lets you set a new prefix.
+           .prefix <novo prefixo>
+           Altera o prefixo atual para um novo de sua preferencia.
            [Admin]`,
         });
     }

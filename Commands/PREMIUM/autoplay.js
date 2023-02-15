@@ -7,8 +7,7 @@ module.exports = class extends Command {
         super(...args, {
             name: "autoplay",
             aliases: ['ap','auto'],
-            description: `Toggle the bot to continuously queue up recommended tracks.
-            [Premium, Admin]`,
+            description: ``,
         });
     }
 
@@ -24,7 +23,7 @@ module.exports = class extends Command {
                 guild.autoplay = false;
                 await guild.save();
 
-                return message.success(`Autoplay Disabled`);
+                return message.success(`Autoplay disabilitado`);
 
 
         } else {
@@ -32,7 +31,7 @@ module.exports = class extends Command {
             guild.autoplay = true;
             await guild.save();
 
-            return message.success(`Autoplay Enabled`);
+            return message.success(`Autoplay habilitado`);
 
 
 

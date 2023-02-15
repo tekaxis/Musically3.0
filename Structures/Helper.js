@@ -18,20 +18,20 @@ class Helper {
 
     let content = `
     _ _
-   **Queue list:**
-   Join a voice channel and queue songs by name or url in here.`
+   **Fila:**
+   Entre em um canal de voz e adicione músicas digitando pelo nome ou sua URL aqui.`
    
            let e = new discord.EmbedBuilder()
-               .setImage("https://cdn.hydra.bot/hydra_no_music.png")
+               .setImage("https://i.imgur.com/FQOWLBW.png")
                .setColor("Purple")
-               .setTitle(`No song playing currently`)
+               .setTitle(`Nenhuma música tocando no momento`)
                .setDescription(`
-   [Invite](https://discord.com) | [Dashboard](https://discord.com) | [Commands](https://discord.com) | [Support](https://discord.com)    
+   [Convite](https://discord.com) | [Painel](https://discord.com) | [Comandos](https://discord.com) | [Suporte](https://discord.com)    
    
      
                
                `)
-               .setFooter({text:`Prefix for this server is ${data.prefix}`})
+               .setFooter({text:`O prefixo do servidor é . ${data.prefix}`})
    
 
 
@@ -61,7 +61,7 @@ class Helper {
           data.requester
             ? `${
                 player.currentTrack.info.requester
-                  ? `Requested by: ${player.currentTrack.info.requester}`
+                  ? `Solicitado por: ${player.currentTrack.info.requester}`
                   : ""
               }`
             : " _ _"
@@ -69,14 +69,14 @@ class Helper {
         .setColor("Purple")
         .setImage(player.currentTrack.info.image)
         .setFooter({text:
-          `${player.queue.length} songs in queue | Volume: ${
+          `${player.queue.length} músicas na fila | Volume: ${
             player.filters.volume * 100
-          }%${player.isPaused ? " | Song paused" : ""}${
+          }%${player.isPaused ? " | Música pausada" : ""}${
             loop ? ` | Loop: ${player.loop.toLowerCase()}` : ""
           }`
          } );
-      const content = `** **\n**__Queue list:__**\n\n${
-        player.queue.length > 15 ? `And **${player.queue.length - 15}** more...\n` : ""
+      const content = `** **\n**__Fila:__**\n\n${
+        player.queue.length > 15 ? `E **${player.queue.length - 15}** mais...\n` : ""
       }${
         player.queue.length > 0
           ? `${player.queue
@@ -86,7 +86,7 @@ class Helper {
               )
               .reverse()
               .join("\n")}`
-          : "Join a voice channel and queue songs by name or url in here."
+          : "Entre em um canal de voz e adicione músicas digitando pelo nome ou sua URL aqui."
       }`;
       message.edit({embeds:[embed],content:content});
     

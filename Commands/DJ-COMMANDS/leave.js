@@ -5,8 +5,8 @@ module.exports = class extends Command {
     constructor(...args) {
         super(...args, {
             name: "leave",
-            aliases: ['dc','disconnect'],
-            description: 'Disconnects the bot from its current voice channel.',
+            aliases: ['dc','sair'],
+            description: 'Disconecta o bot do canal de voz atual.',
         });
     }
 

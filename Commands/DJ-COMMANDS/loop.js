@@ -6,20 +6,17 @@ module.exports = class extends Command {
         super(...args, {
             name: "loop",
             description: `
-Cycles through all three loop modes (queue, song, off).
-[DJ]
+Alterna entre os três modos de loop (queue, song, off).
+
             ​
 .loop queue
-Loop the queue.
-[DJ]
+Loop na fila.
             ​
 .loop song
-Loop the current playing song.
-[DJ]
+Loop na música atual.
             ​
 .loop off
-Turn looping off
-[DJ]'
+Desativa todos os loops.
 `,
 
         });
@@ -37,32 +34,32 @@ Turn looping off
             if (player.loop === "NONE") {
 
                 player.setLoop("QUEUE");
-                return message.success(`Looping the queue activated.`)
+                return message.success(`Loop da fila foi ativado`)
             } else if (player.loop === 'QUEUE') {
                 player.setLoop("TRACK");
-                return message.success(`Looping the current song enabled.`)
+                return message.success(`Loop da música atual foi ativado.`)
             } else if (player.loop === "TRACK") {
 
                 player.setLoop("NONE");
-                return message.success(`Looping disabled.`)
+                return message.success(`Loop desativado.`)
             }
 
         } else if (args[0].toLowerCase() === 'off') {
 
             player.setLoop("NONE")
-            return message.success(`Looping disabled.`)
+            return message.success(`Loop desativado.`)
 
 
         } else if (args[0].toLowerCase() === 'song') {
 
             player.setLoop("TRACK")
-            return message.success(`Looping the current song enabled.`)
+            return message.success(`Loop da música atual foi ativado.`)
 
 
         } else if (args[0].toLowerCase() === 'queue') {
 
             player.setLoop("QUEUE")
-            return message.success(`Looping the queue activated.`)
+            return message.success(`Loop da fila foi ativado`)
 
 
         }

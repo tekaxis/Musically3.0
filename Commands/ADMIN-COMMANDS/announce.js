@@ -6,13 +6,14 @@ module.exports = class extends Command {
     constructor(...args) {
         super(...args, {
             name: "announce",
+            aliases :['anunciar','an'],
             description: `
             .announce
-            Toggle sending of now playing messages on/off
+            Habilita/Desabilita mensagens de reprodução de música.
             [Admin]
             ​
             .announce delete
-            Toggle deletion of now playing messages on/off
+            Habilita/Desabilita deletar mensagens das músicas tocando no momento.
             [Admin]`,
         });
     }

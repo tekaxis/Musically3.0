@@ -9,7 +9,7 @@ module.exports = class extends Command {
     constructor(...args) {
         super(...args, {
             name: "setup",
-            aliases :['clean'],
+            aliases :['start'],
            description: `
            .prefix
            Show the current prefix.
@@ -30,13 +30,13 @@ module.exports = class extends Command {
       let x  = await  message.guild.channels.create({
             name : client.config.channelName,
             type: ChannelType.GuildText,
-            topic : `<:hydra_play:971015680600199178> Pause/Resume the song.
-            <:hydra_stop:971015680696672356> Stop and empty the queue.
-            <:hydra_skip:971015680654729216> Skip the song.
-            <:hydra_loop_off:971015680629559296> Switch between the loop modes.
-            <:hydra_shuffle:971015680633741312> Shuffle the queue.
-            <:hydra_button_green:974274003659292682> Add the current song to your private playlist.
-            <:hydra_button_red:974274003663482880> Remove the current song from your private playlist.`,
+            topic : `<:hydra_play:971015680600199178> Pausa/continua a música.
+            <:hydra_stop:971015680696672356> Cancela e limpa toda fila.
+            <:hydra_skip:971015680654729216> Pula a música atual.
+            <:hydra_loop_off:971015680629559296> Troca os modos de loop.
+            <:hydra_shuffle:971015680633741312> Mistura as músicas da playlist.
+            <:hydra_button_green:974274003659292682> Adiciona a música atual a sua playlist privada.
+            <:hydra_button_red:974274003663482880> Remove a música atual de sua playlist privada.`,
             reason : ``
 
         })
@@ -53,7 +53,7 @@ module.exports = class extends Command {
             url:"https://cdn.discordapp.com/attachments/1035561055939723334/1035561057390960680/hydra_banner.png"})
 
 */
-        channel.send({files:["https://cdn.discordapp.com/attachments/1035561055939723334/1035561057390960680/hydra_banner.png"]}).then (x => {
+        channel.send("Feito com muito carinho por Carlu#6635").then (x => {
 
 
 
@@ -91,11 +91,11 @@ module.exports = class extends Command {
                 new discord.ButtonBuilder()
                   .setCustomId("ADD_TRACK_TO_PLAYLIST")
                   .setStyle(ButtonStyle.Success)
-                  .setLabel("Add to Playlist"),
+                  .setLabel(" Adicionar a playlist"),
                   new discord.ButtonBuilder()
                   .setCustomId("REMOVE_TRACK_FROM_PLAYLIST")
                   .setStyle(ButtonStyle.Danger)
-                  .setLabel("Remove from Playlist"),
+                  .setLabel("Remover da playlist"),
         
 
               )
@@ -114,20 +114,20 @@ module.exports = class extends Command {
 
         let content = `
  _ _
-**Queue list:**
-Join a voice channel and queue songs by name or url in here.`
+**Fila:**
+Entre em um canal de voz e adicione músicas digitando pelo nome ou sua URL aqui.`
 
         let e = new Discord.EmbedBuilder()
-            .setImage("https://cdn.hydra.bot/hydra_no_music.png")
+            .setImage("https://i.imgur.com/FQOWLBW.png")
             .setColor("Purple")
-            .setTitle(`No song playing currently`)
+            .setTitle(`Nenhuma música tocando no momento`)
             .setDescription(`
-[Invite](https://discord.com) | [Dashboard](https://discord.com) | [Commands](https://discord.com) | [Support](https://discord.com)    
+[Convite](https://discord.com) | [Painel](https://discord.com) | [Comandos](https://discord.com) | [Suporte](https://discord.com)    
 
   
             
             `)
-            .setFooter({text:`Prefix for this server is ${guild.prefix}`})
+            .setFooter({text:`O prefixo do servidor é ${guild.prefix}`})
 
 
 

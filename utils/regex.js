@@ -1,5 +1,4 @@
-let urls = ['http://youtube.com', "https://youtube.com", 'http://www.youtube.com/', 'https://www.youtube.com/', 'http://youtu.be/',
-    'https://youtu.be/', "http://redtube.com", "https://redtube.com", "http://music.youtube.com", "https://music.youtube.com"]
+let urls = ["http://redtube.com", "https://redtube.com"]
 
 module.exports = (url) => {
 

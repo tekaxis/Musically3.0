@@ -5,8 +5,8 @@ module.exports = class extends Command {
     constructor(...args) {
         super(...args, {
             name: "clear",
-            aliases: ['c','empty'],
-            description: 'Clears the current queue.',
+            aliases: ['c','limpar'],
+            description: 'Limpa toda a fila.',
         });
     }
 
@@ -14,11 +14,11 @@ module.exports = class extends Command {
 
 
         if(player.queue.length === 0){
-            return message.error(`There is currently no song in the queue.`)
+            return message.error(`Nenhuma música na fila.`)
         }
         player.queue.clear()
 
-        return message.success(`The queue has been cleared.`)
+        return message.success(`A fila já está limpa.`)
 
 
     }}

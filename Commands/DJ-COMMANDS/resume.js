@@ -7,8 +7,8 @@ module.exports = class extends Command {
             name: "resume",
             aliases: ['continue'],
             description: `
-PResumes the current paused song.
-[DJ]`,
+Continua uma música pausada.
+`,
         });
     }
 
@@ -16,12 +16,12 @@ PResumes the current paused song.
 
 
         if (!player.isPaused) {
-            return message.send(`The song is not paused.`)
+            return message.send(`A música não está pausada.`)
         }
 
         player.pause(false);
 
-        return message.success(`Resumed the song.`)
+        return message.success(`Continuando a música.`)
 
 
     }
